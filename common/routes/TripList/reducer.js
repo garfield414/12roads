@@ -7,18 +7,18 @@ const initialState = {
   error: null
 }
 
-export default function posts (state = initialState, action) {
+export default function trips (state = initialState, action) {
   switch (action.type) {
-    case types.LOAD_POSTS_REQUEST:
+    case types.LOAD_TRIPS_REQUEST:
       return { ...state,
         isLoading: true,
         error: null}
-    case types.LOAD_POSTS_SUCCESS:
+    case types.LOAD_TRIPS_SUCCESS:
       return { ...state,
         data: action.payload,
         lastFetched: action.meta.lastFetched,
         isLoading: false}
-    case types.LOAD_POSTS_FAILURE:
+    case types.LOAD_TRIPS_FAILURE:
       return { ...state,
         error: action.payload}
     default:
@@ -27,4 +27,4 @@ export default function posts (state = initialState, action) {
 }
 
 // Example of a co-located selector
-export const selectPosts = state => state.posts
+export const selectTrips = state => state.trips

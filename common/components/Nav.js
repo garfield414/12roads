@@ -8,10 +8,10 @@ const Nav = () => (
     <IndexLink to='/' className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}>
       Home
     </IndexLink>
-    <Link to='/posts' className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}> Example Feed
+    <Link to='/trips' className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}> Explore
     </Link>
-    <a href='https://github.com/jaredpalmer/react-production-starter' className={css(styles.link)} target='_blank'>GitHub</a>
-    <a href='https://twitter.com/jaredpalmer' className={css(styles.link)} target='_blank'>Twitter</a>
+    <a href='https://github.com/jhabdas' className={css(styles.link)} target='_blank'>GitHub</a>
+    <a href='https://medium.com/@jhabdas' className={css(styles.link)} target='_blank'>Medium</a>
   </div>
 )
 

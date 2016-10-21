@@ -14,7 +14,7 @@ router.get('/:slug', (req, res) => {
   const index = fakeDB.findIndex(el => el.slug === req.params.slug)
   if (index < 0) {
     res.status(404).json({
-      error: 'Post does not exist in db'
+      error: 'Trip does not exist in db'
     })
   }
 

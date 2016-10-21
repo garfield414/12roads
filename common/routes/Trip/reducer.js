@@ -5,22 +5,26 @@ const initialState = {
   isLoading: false,
   error: null,
   title: '',
-  content: ''
+  overlay: null,
+  content: '',
+  photos: []
 }
 
-export default function currentPost (state = initialState, action) {
+export default function currentTrip (state = initialState, action) {
   switch (action.type) {
-    case types.LOAD_POST_REQUEST:
+    case types.LOAD_TRIP_REQUEST:
       return { ...state,
         isLoading: true,
         error: null}
-    case types.LOAD_POST_SUCCESS:
+    case types.LOAD_TRIP_SUCCESS:
       return { ...state,
         title: action.payload.title,
+        overlay: action.payload.overlay,
         content: action.payload.content,
+        photos: action.payload.photos,
         lastFetched: action.meta.lastFetched,
         isLoading: false}
-    case types.LOAD_POST_FAILURE:
+    case types.LOAD_TRIP_FAILURE:
       return { ...state,
         error: action.payload }
     default:
@@ -29,4 +33,4 @@ export default function currentPost (state = initialState, action) {
 }
 
 // Example of a co-located selector
-export const selectCurrentPost = state => state.currentPost
+export const selectCurrentTrip = state => state.currentTrip

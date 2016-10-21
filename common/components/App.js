@@ -3,16 +3,21 @@ import Helmet from 'react-helmet'
 import Nav from './Nav'
 import { StyleSheet, css } from 'aphrodite'
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 const App = ({ children }) => (
-  <div className={css(styles.root)}>
-    <Helmet title='React Production Starter' titleTemplate='%s - React Production Starter' />
-    <h1 className={css(styles.title)}>React Production Starter</h1>
-    <Nav />
-    {children}
-    <footer className={css(styles.footer)}>
-      Copyright © 2016 <a className={css(styles.footerLink)} href='http://twitter.com/jaredpalmer' target='_blank'>Jared Palmer</a>
-    </footer>
-  </div>
+  <MuiThemeProvider>
+    <div className={css(styles.root)}>
+      <Helmet title='12Roads' titleTemplate='%s - 12Roads' />
+      <h1 className={css(styles.title)}>12Roads</h1>
+      <h2 className={css(styles.subtitle)}>Get up, get out, get something</h2>
+      <Nav />
+      {children}
+      <footer className={css(styles.footer)}>
+        Copyright © 2016 <a className={css(styles.footerLink)} href='http://habd.as' target='_blank'>habd.as</a>
+      </footer>
+    </div>
+  </MuiThemeProvider>
 )
 
 const styles = StyleSheet.create({
@@ -27,6 +32,12 @@ const styles = StyleSheet.create({
     maxWidth: 300,
     fontWeight: 'bold',
     fontSize: 56
+  },
+  subtitle: {
+    color: '#999',
+    maxWidth: 300,
+    fontWeight: 'bold',
+    fontSize: 28
   },
   footer: {
     margin: '4rem auto',

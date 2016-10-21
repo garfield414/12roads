@@ -9,6 +9,8 @@ import browserHistory from 'react-router/lib/browserHistory'
 import { Provider } from 'react-redux'
 import { StyleSheet } from 'aphrodite'
 
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
 import { configureStore } from '../common/store'
 const initialState = window.INITIAL_STATE || {}
 // Set up Redux (note: this API requires redux@>=3.1.0):
@@ -18,6 +20,10 @@ const { dispatch } = store
 const container = document.getElementById('root')
 
 StyleSheet.rehydrate(window.renderedClassNames)
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin()
 
 const render = () => {
   const { pathname, search, hash } = window.location
