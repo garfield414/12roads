@@ -26,7 +26,7 @@
 - [ ] [Add Roboto font](https://github.com/callemall/material-ui#roboto-font) for existing Material UI theme
 - [ ] [Bleak CSS3 page transitions](https://github.com/Zenithar/hugo-theme-bleak) for engagement
 - [ ] Add [react-photoswipe](https://github.com/minhtranite/react-photoswipe/) for image viewing
-- [ ] Add [TQIP](https://jmperezperez.com/medium-image-progressive-loading-placeholder/) for Medium-style image placeholders, or at least some placeholder to start (important for slow connections)
+- [ ] Add [LQIP](https://jmperezperez.com/medium-image-progressive-loading-placeholder/) for Medium-style image placeholders, or at least some placeholder to start (important for slow connections)
 
 # React Production Starter
 
